@@ -92,18 +92,23 @@
 
 
 <section class="gallery" id="fotos">
-  <h2>Galería de fotos</h2>
-  <p>Momentos capturados en nuestros conciertos y sesiones de estudio.</p>
+  <h2>Fotos</h2>
 
   <div class="gallery-grid">
-    <a href="images/live1.jpg" target="_blank"><img src="images/live1.jpg" alt="Concierto en Barcelona"></a>
-    <a href="images/live2.jpg" target="_blank"><img src="images/live2.jpg" alt="Grabando en estudio"></a>
-    <a href="images/live3.jpg" target="_blank"><img src="images/live3.jpg" alt="Ensayo de la banda"></a>
-    <a href="images/live4.jpg" target="_blank"><img src="images/live4.jpg" alt="Concierto en festival"></a>
-    <a href="images/live5.jpg" target="_blank"><img src="images/live5.jpg" alt="Sesión acústica"></a>
-    <a href="images/live6.jpg" target="_blank"><img src="images/live6.jpg" alt="Backstage"></a>
+    <img src="images/live1.jpg" alt="Concierto en Barcelona" onclick="openModal(this.src)">
+    <img src="images/live2.jpg" alt="Grabando en estudio" onclick="openModal(this.src)">
+    <img src="images/live3.jpg" alt="Ensayo de la banda" onclick="openModal(this.src)">
+    <img src="images/live4.jpg" alt="Concierto en festival" onclick="openModal(this.src)">
+    <img src="images/live5.jpg" alt="Sesión acústica" onclick="openModal(this.src)">
+    <img src="images/live6.jpg" alt="Backstage" onclick="openModal(this.src)">
   </div>
 </section>
+
+<!-- Modal para ampliar imágenes -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
 
 
 
@@ -124,6 +129,16 @@
   © NUR
 </footer>
 
+<script>
+function openModal(src) {
+  document.getElementById('imageModal').style.display = 'flex';
+  document.getElementById('modalImg').src = src;
+}
+
+function closeModal() {
+  document.getElementById('imageModal').style.display = 'none';
+}
+</script>
+
 </body>
 </html>
-
