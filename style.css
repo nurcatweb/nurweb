@@ -230,63 +230,6 @@ body{
 
 }
 
-/* SLIDER SIMPLE */
-
-.slider {
-  position: relative;
-  max-width: 900px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.slider img {
-  width: 100%;
-  display: none;
-  height: 300px;
-  object-fit: cover;
-  transition: opacity 0.5s;
-  border-radius: 8px;
-}
-
-.slider img.active {
-  display: block;
-}
-
-.slider button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  border: none;
-  color: #fff;
-  font-size: 30px;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 50%;
-  z-index: 10;
-}
-
-.slider button:hover {
-  background: rgba(0,0,0,0.8);
-}
-
-.slider .prev {
-  left: 10px;
-}
-
-.slider .next {
-  right: 10px;
-}
-
-@media(max-width:900px){
-  .slider img { height: 220px; }
-}
-
-@media(max-width:600px){
-  .slider img { height: 180px; }
-}
-
 .slider-wrapper {
   position: relative;
   max-width: 1000px;
