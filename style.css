@@ -132,6 +132,7 @@ body{
 .music{
   padding:90px 8vw;
   background:#c65c57;
+  text-align:center;
 }
 
 .music h2{
@@ -140,6 +141,7 @@ body{
 
 .embed{
   max-width:900px;
+  margin:0 auto;
 }
 
 /* VIDEO */
@@ -147,6 +149,7 @@ body{
 .video{
   padding:90px 8vw;
   background:#d66a64;
+  text-align:center;
 }
 
 .video h2{
@@ -158,6 +161,7 @@ body{
   grid-template-columns:1fr 1fr;
   gap:30px;
   max-width:1000px;
+  margin:0 auto;
 }
 
 .video-grid iframe{
