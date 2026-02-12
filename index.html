@@ -9,39 +9,6 @@
 
 </head>
 
-<script>
-const track = document.querySelector('.carousel-track');
-const items = document.querySelectorAll('.carousel-item');
-const prevBtn = document.querySelector('.carousel .prev');
-const nextBtn = document.querySelector('.carousel .next');
-
-let index = 0;
-
-function showCarousel() {
-  const itemWidth = items[0].getBoundingClientRect().width;
-  track.style.transform = `translateX(${-index * itemWidth}px)`;
-}
-
-prevBtn.addEventListener('click', () => {
-  const visible = Math.round(track.offsetWidth / items[0].offsetWidth);
-  index = Math.max(index - 1, 0);
-  showCarousel();
-});
-
-nextBtn.addEventListener('click', () => {
-  const visible = Math.round(track.offsetWidth / items[0].offsetWidth);
-  index = Math.min(index + 1, items.length - visible);
-  showCarousel();
-});
-
-// inicial
-showCarousel();
-
-// actualizar al redimensionar
-window.addEventListener('resize', showCarousel);
-</script>
-
-
 
   
 <body>
@@ -128,19 +95,16 @@ window.addEventListener('resize', showCarousel);
   <h2>Galería de fotos</h2>
   <p>Momentos capturados en nuestros conciertos y sesiones de estudio.</p>
 
-  <div class="carousel">
-    <div class="carousel-track">
-      <div class="carousel-item"><img src="images/live1.jpg" alt="Concierto en Barcelona"></div>
-      <div class="carousel-item"><img src="images/live2.jpg" alt="Grabando en estudio"></div>
-      <div class="carousel-item"><img src="images/live3.jpg" alt="Ensayo de la banda"></div>
-      <div class="carousel-item"><img src="images/live4.jpg" alt="Concierto en festival"></div>
-      <div class="carousel-item"><img src="images/live5.jpg" alt="Sesión acústica"></div>
-      <div class="carousel-item"><img src="images/live6.jpg" alt="Backstage"></div>
-    </div>
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
+  <div class="gallery-grid">
+    <a href="images/live1.jpg" target="_blank"><img src="images/live1.jpg" alt="Concierto en Barcelona"></a>
+    <a href="images/live2.jpg" target="_blank"><img src="images/live2.jpg" alt="Grabando en estudio"></a>
+    <a href="images/live3.jpg" target="_blank"><img src="images/live3.jpg" alt="Ensayo de la banda"></a>
+    <a href="images/live4.jpg" target="_blank"><img src="images/live4.jpg" alt="Concierto en festival"></a>
+    <a href="images/live5.jpg" target="_blank"><img src="images/live5.jpg" alt="Sesión acústica"></a>
+    <a href="images/live6.jpg" target="_blank"><img src="images/live6.jpg" alt="Backstage"></a>
   </div>
 </section>
+
 
 
 
